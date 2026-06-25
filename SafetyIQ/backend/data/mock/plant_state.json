@@ -1,0 +1,199 @@
+{
+  "sensors": [
+    {
+      "sensor_id": "S001",
+      "zone": "Coke Oven Battery A",
+      "sensor_type": "H2S",
+      "value": 15.0,
+      "unit": "ppm",
+      "threshold_warning": 10,
+      "threshold_critical": 20,
+      "trend": "rising",
+      "last_calibration": "2025-01-01"
+    },
+    {
+      "sensor_id": "S002",
+      "zone": "Coke Oven Battery A",
+      "sensor_type": "CO",
+      "value": 290.0,
+      "unit": "ppm",
+      "threshold_warning": 200,
+      "threshold_critical": 400,
+      "trend": "rising",
+      "last_calibration": "2025-01-01"
+    },
+    {
+      "sensor_id": "S003",
+      "zone": "Blast Furnace Zone",
+      "sensor_type": "TEMP",
+      "value": 1340.0,
+      "unit": "°C",
+      "threshold_warning": 1400,
+      "threshold_critical": 1500,
+      "trend": "stable",
+      "last_calibration": "2024-12-15"
+    },
+    {
+      "sensor_id": "S004",
+      "zone": "Chemical Storage",
+      "sensor_type": "PRESSURE",
+      "value": 8.5,
+      "unit": "bar",
+      "threshold_warning": 10,
+      "threshold_critical": 12,
+      "trend": "rising",
+      "last_calibration": "2025-01-05"
+    },
+    {
+      "sensor_id": "S005",
+      "zone": "Confined Space B7",
+      "sensor_type": "O2",
+      "value": 17.8,
+      "unit": "%",
+      "threshold_warning": 19.5,
+      "threshold_critical": 16.0,
+      "trend": "falling",
+      "last_calibration": "2025-01-10"
+    },
+    {
+      "sensor_id": "S006",
+      "zone": "Coke Oven Battery B",
+      "sensor_type": "H2S",
+      "value": 3.0,
+      "unit": "ppm",
+      "threshold_warning": 10,
+      "threshold_critical": 20,
+      "trend": "stable",
+      "last_calibration": "2025-01-01"
+    },
+    {
+      "sensor_id": "S007",
+      "zone": "Hot Strip Mill",
+      "sensor_type": "TEMP",
+      "value": 820.0,
+      "unit": "°C",
+      "threshold_warning": 900,
+      "threshold_critical": 1000,
+      "trend": "stable",
+      "last_calibration": "2024-12-20"
+    },
+    {
+      "sensor_id": "S008",
+      "zone": "Raw Material Bay",
+      "sensor_type": "CO",
+      "value": 45.0,
+      "unit": "ppm",
+      "threshold_warning": 200,
+      "threshold_critical": 400,
+      "trend": "stable",
+      "last_calibration": "2025-01-08"
+    }
+  ],
+  "permits": [
+    {
+      "permit_id": "PTW-2847",
+      "type": "CONFINED_SPACE",
+      "zone": "Confined Space B7",
+      "workers": 4,
+      "issued_by": "SO-Sharma",
+      "status": "ACTIVE",
+      "isolation_confirmed": true,
+      "isolation_cert_attached": false,
+      "atmospheric_test_done": true,
+      "rescue_plan": true,
+      "scba_units_available": 2
+    },
+    {
+      "permit_id": "PTW-2851",
+      "type": "HOT_WORK",
+      "zone": "Coke Oven Battery A",
+      "workers": 2,
+      "issued_by": "SO-Patel",
+      "status": "ACTIVE",
+      "isolation_confirmed": false,
+      "isolation_cert_attached": false,
+      "atmospheric_test_done": true,
+      "rescue_plan": true,
+      "scba_units_available": 0
+    },
+    {
+      "permit_id": "PTW-2849",
+      "type": "ELECTRICAL_ISOLATION",
+      "zone": "Hot Strip Mill",
+      "workers": 2,
+      "issued_by": "SO-Kumar",
+      "status": "ACTIVE",
+      "isolation_confirmed": true,
+      "isolation_cert_attached": true,
+      "atmospheric_test_done": true,
+      "rescue_plan": true,
+      "scba_units_available": 0
+    },
+    {
+      "permit_id": "PTW-2853",
+      "type": "CONFINED_SPACE",
+      "zone": "Raw Material Bay",
+      "workers": 3,
+      "issued_by": "SO-Singh",
+      "status": "SUSPENDED",
+      "isolation_confirmed": false,
+      "isolation_cert_attached": false,
+      "atmospheric_test_done": false,
+      "rescue_plan": false,
+      "scba_units_available": 1,
+      "suspension_reason": "Missing pre-entry atmospheric test and rescue plan"
+    }
+  ],
+  "maintenance": [
+    {
+      "equipment_id": "PRV-004",
+      "name": "Pressure Relief Valve PRV-004",
+      "zone": "Chemical Storage",
+      "last_inspection": "2024-11-28",
+      "next_due": "2024-12-28",
+      "status": "OPERATIONAL",
+      "days_overdue": 17,
+      "type": "PRV"
+    },
+    {
+      "equipment_id": "GD-COKA-001",
+      "name": "H2S Detector Coke Oven A",
+      "zone": "Coke Oven Battery A",
+      "last_calibration": "2024-10-15",
+      "next_calibration_due": "2025-01-13",
+      "status": "OPERATIONAL",
+      "days_overdue": 93,
+      "type": "GAS_DETECTOR"
+    },
+    {
+      "equipment_id": "GD-CONF-001",
+      "name": "O2 Detector Confined Space B7",
+      "zone": "Confined Space B7",
+      "last_calibration": "2025-01-05",
+      "next_calibration_due": "2025-04-05",
+      "status": "OPERATIONAL",
+      "days_overdue": 0,
+      "type": "GAS_DETECTOR"
+    }
+  ],
+  "workers": [
+    { "worker_id": "W001", "name": "Rajesh Kumar",  "zone": "Confined Space B7",   "permit_id": "PTW-2847" },
+    { "worker_id": "W002", "name": "Suresh Patel",  "zone": "Confined Space B7",   "permit_id": "PTW-2847" },
+    { "worker_id": "W003", "name": "Anil Singh",    "zone": "Confined Space B7",   "permit_id": "PTW-2847" },
+    { "worker_id": "W004", "name": "Vijay Rao",     "zone": "Confined Space B7",   "permit_id": "PTW-2847" },
+    { "worker_id": "W005", "name": "Mohan Welder",  "zone": "Coke Oven Battery A", "permit_id": "PTW-2851" },
+    { "worker_id": "W006", "name": "Ram Helper",    "zone": "Coke Oven Battery A", "permit_id": "PTW-2851" },
+    { "worker_id": "W007", "name": "Elec Tech A",   "zone": "Hot Strip Mill",      "permit_id": "PTW-2849" },
+    { "worker_id": "W008", "name": "Elec Tech B",   "zone": "Hot Strip Mill",      "permit_id": "PTW-2849" }
+  ],
+  "plant_config": {
+    "name": "Visakhapatnam Steel Complex",
+    "address": "Steel Plant Road, Ukkunagaram, Visakhapatnam, Andhra Pradesh 530031",
+    "dgfasli_reg": "AP/VSP/2024/001",
+    "factory_licence": "APFACT/2024/VSP/0042",
+    "total_workers_on_site": 53,
+    "shift": "DAY",
+    "shift_changeover_in_minutes": 12,
+    "last_incident_days": 287
+  }
+}
