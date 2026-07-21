@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-950: #080C10;
+  --surface-900: #0D1117;
+  --surface-800: #131920;
+  --surface-700: #1A2230;
+  --surface-600: #1E2B3C;
+
+  --risk-safe:     #22C55E;
+  --risk-caution:  #EAB308;
+  --risk-elevated: #F97316;
+  --risk-danger:   #EF4444;
+  --risk-critical: #DC2626;
+
+  --accent-blue: #3B82F6;
+  --accent-cyan: #06B6D4;
+
+  --text-primary:   #F0F4F8;
+  --text-secondary: #8899AA;
+  --text-muted:     #445566;
+
+  --border-subtle: rgba(255,255,255,0.07);
+  --border-active: rgba(59,130,246,0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--surface-950);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--surface-900); }
+::-webkit-scrollbar-thumb { background: var(--surface-600); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+/* Risk status colors as utility classes */
+.risk-safe     { color: var(--risk-safe); }
+.risk-caution  { color: var(--risk-caution); }
+.risk-elevated { color: var(--risk-elevated); }
+.risk-danger   { color: var(--risk-danger); }
+.risk-critical { color: var(--risk-critical); }
+
+.bg-risk-safe     { background-color: var(--risk-safe); }
+.bg-risk-caution  { background-color: var(--risk-caution); }
+.bg-risk-elevated { background-color: var(--risk-elevated); }
+.bg-risk-danger   { background-color: var(--risk-danger); }
+.bg-risk-critical { background-color: var(--risk-critical); }
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(19, 25, 32, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+}
+
+/* Critical pulse ring */
+@keyframes criticalPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+.critical-pulse { animation: criticalPulse 2s ease-in-out infinite; }
+
+/* Scan line animation for live indicator */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Mono number display */
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Smooth value transitions */
+.value-transition {
+  transition: color 0.4s ease, transform 0.2s ease;
+}
