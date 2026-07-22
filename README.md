@@ -282,5 +282,3 @@ npm run dev
 - **Email:** myashika2005@gmail.com
 
 ---
-
-*Built for Bharatiya Antariksh Hackathon 2026 · Industrial Intelligence Track · Zero-Harm Operations*
