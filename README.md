@@ -6,7 +6,7 @@ Zero-Harm Operations through Compound Risk Detection, Geospatial Analytics & Aut
 
 `Industrial Intelligence` · `Worker Safety` · `Geospatial Safety Analytics`
 
-Built for **Bharatiya Antariksh Hackathon 2026** — Industrial Intelligence Track — Zero-Harm Operations
+Industrial Intelligence Track — Zero-Harm Operations
 
 ---
 
